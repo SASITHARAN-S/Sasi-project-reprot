@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Educational website about climate change and sustainability - Learn about environmental protection and renewable energy solutions">
+    <meta name="keywords" content="climate change, sustainability, environmental protection, renewable energy, education">
+    <title>Climate & Sustainability Education</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322c55e'%3E%3Cpath d='M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z'/%3E%3C/svg%3E">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z"/>
+                    </svg>
+                    <span>EcoLearn</span>
+                </div>
+                
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav-toggle-icon"></span>
+                </button>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="#home" role="menuitem">Home</a></li>
+                    <li role="none"><a href="#climate-change" role="menuitem">Climate Change</a></li>
+                    <li role="none"><a href="#sustainability" role="menuitem">Sustainability</a></li>
+                    <li role="none"><a href="#renewable-energy" role="menuitem">Renewable Energy</a></li>
+                    <li role="none"><a href="#environmental-protection" role="menuitem">Protection</a></li>
+                </ul>
+                
+                <div class="search-container">
+                    <input type="search" id="search-input" placeholder="Search content..." aria-label="Search educational content">
+                    <button type="button" id="search-button" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main" role="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Understanding Our Planet's Future</h1>
+                <p class="hero-subtitle">Explore climate change, sustainability, and environmental solutions through clear, accessible education.</p>
+                <div class="hero-actions">
+                    <a href="#climate-change" class="btn btn-primary">Start Learning</a>
+                    <a href="#gallery" class="btn btn-secondary">View Gallery</a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <svg width="200" height="200" viewBox="0 0 200 200" class="hero-icon">
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="var(--color-primary)" stroke-width="2"/>
+                    <path d="M100 40 L120 80 L160 80 L130 110 L140 150 L100 130 L60 150 L70 110 L40 80 L80 80 Z" fill="var(--color-primary)" opacity="0.7"/>
+                    <circle cx="100" cy="100" r="30" fill="var(--color-accent)"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Search Results Section -->
+        <section id="search-results" class="search-results" style="display: none;" aria-live="polite">
+            <div class="container">
+                <h2>Search Results</h2>
+                <div id="search-results-container"></div>
+            </div>
+        </section>
+
+        <!-- Climate Change Section -->
+        <section id="climate-change" class="content-section" aria-labelledby="climate-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="climate-title">Climate Change Awareness</h2>
+                    <p class="section-subtitle">Understanding the science, impacts, and urgency of our changing climate</p>
+                </header>
+                
+                <div class="content-grid">
+                    <article class="content-card">
+                        <div class="card-image">
+                            <img src="https://pixabay.com/get/g51af1bcca9a8f75bab190eeeca745bd41dad7f58be12a2cb9cee24fd7bf3d0073e08a56b249cc7c198f67252041656adde7a955636098fabe0f64a56b5448257_1280.jpg" alt="Environmental impacts of climate change" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>What is Climate Change?</h3>
+                            <p>Climate change refers to long-term shifts in global temperatures and weather patterns. While natural variations occur, scientific evidence shows human activities are the primary driver since the 1800s.</p>
+                            <ul class="key-points">
+                                <li>Global average temperature has risen 1.1°C since pre-industrial times</li>
+                                <li>CO2 levels are at their highest in 3 million years</li>
+                                <li>Human activities produce 36+ billion tons of CO2 annually</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="content-card">
+                        <div class="card-image">
+                            <img src="https://pixabay.com/get/g8e7ce3a8e051ee3697c048d6a63b22ff7e42c57de45a41c2427550b5ff569ca19523ec6360b437b43dc11cf01b1659af01f1b733cdd274c42a59fae012e20cb3_1280.jpg" alt="Global warming effects visualization" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Observable Impacts</h3>
+                            <p>Climate change effects are already visible worldwide, affecting ecosystems, weather patterns, and human communities.</p>
+                            <ul class="key-points">
+                                <li>Sea level rise: 21-24cm since 1880</li>
+                                <li>Arctic sea ice declining 13% per decade</li>
+                                <li>Increased frequency of extreme weather events</li>
+                                <li>Ocean acidification threatening marine life</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="content-card">
+                        <div class="card-image">
+                            <img src="https://pixabay.com/get/g819a72331464feca07de56b4f3b19517b7dbab015868d91bc3605ca15fe4e2cec2b83541fe99b34543bc4b4bc271b70fd457d0e8ec8ab62dd0bcdb72ea0ad802_1280.jpg" alt="Climate action and solutions" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Taking Action</h3>
+                            <p>Addressing climate change requires immediate action at individual, community, and global levels.</p>
+                            <ul class="key-points">
+                                <li>Transition to renewable energy sources</li>
+                                <li>Improve energy efficiency in buildings</li>
+                                <li>Adopt sustainable transportation</li>
+                                <li>Support climate-friendly policies</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="interactive-element">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="climate-details">
+                        <span>Learn More About Climate Science</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="6,9 12,15 18,9"/>
+                        </svg>
+                    </button>
+                    <div id="climate-details" class="accordion-content" hidden>
+                        <div class="detailed-content">
+                            <h4>The Greenhouse Effect</h4>
+                            <p>The greenhouse effect is a natural process that warms Earth's surface. Solar radiation passes through the atmosphere and warms the planet, which then emits infrared radiation back toward space. Greenhouse gases in the atmosphere trap some of this heat, keeping our planet warm enough to support life.</p>
+                            
+                            <h4>Enhanced Greenhouse Effect</h4>
+                            <p>Human activities have increased greenhouse gas concentrations, enhancing the natural greenhouse effect and causing global warming. The main greenhouse gases include:</p>
+                            <ul>
+                                <li><strong>Carbon Dioxide (CO2):</strong> 76% of emissions, primarily from fossil fuel burning</li>
+                                <li><strong>Methane (CH4):</strong> 16% of emissions, from agriculture and waste</li>
+                                <li><strong>Nitrous Oxide (N2O):</strong> 6% of emissions, from agriculture and industry</li>
+                                <li><strong>Fluorinated gases:</strong> 2% of emissions, from industrial processes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sustainability Section -->
+        <section id="sustainability" class="content-section alternate" aria-labelledby="sustainability-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="sustainability-title">Sustainability Concepts</h2>
+                    <p class="section-subtitle">Building a future that meets today's needs without compromising tomorrow's possibilities</p>
+                </header>
+                
+                <div class="content-grid">
+                    <article class="content-card">
+                        <div class="card-image">
+                            <img src="https://pixabay.com/get/ged9dd58903a940c002bf2645b6b02a7225fc92559f9d9e2ccafe3cc16ea35464817ff3d0cf80870fa4042b16a399ad431d573d14e8b18329c3183b546a088f0d_1280.jpg" alt="Sustainable living concepts" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>The Three Pillars</h3>
+                            <p>Sustainability rests on three interconnected pillars that must work together for true sustainable development.</p>
+                            <ul class="key-points">
+                                <li><strong>Environmental:</strong> Protecting ecosystems and natural resources</li>
+                                <li><strong>Economic:</strong> Ensuring prosperity and financial stability</li>
+                                <li><strong>Social:</strong> Promoting equity, health, and well-being</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="content-card">
+                        <div class="card-image">
+                            <img src="https://pixabay.com/get/ge6803e777b352e9feb9b1517b543e87c578a95335b4d38a5f6399cad9df0482ec383ba35e5be1cb75399d7404bfd1dbb7a0d696fec3c6e7ca78db6f179539fbc_1280.jpg" alt="Circular economy principles" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Circular Economy</h3>
+                            <p>Moving away from the linear "take-make-waste" model to a regenerative approach that eliminates waste and maximizes resource use.</p>
+                            <ul class="key-points">
+                                <li>Design out waste and pollution</li>
+                                <li>Keep products and materials in use</li>
+                                <li>Regenerate natural systems</li>
+                                <li>Powered by renewable energy</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="content-card">
+                        <div class="card-image">
+                            <img src="https://pixabay.com/get/g837a92369f8e7368ed2e1f3195bb0696c886072345c07be55ef48eb94b25386e6f51e73d48cd6fbc40b45e5993901a1e46ede6f3d95d70534dddd0d4f78e2753_1280.jpg" alt="Sustainable practices in daily life" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Everyday Actions</h3>
+                            <p>Small daily choices can make a significant collective impact on sustainability.</p>
+                            <ul class="key-points">
+                                <li>Reduce, reuse, recycle materials</li>
+                                <li>Choose sustainable transportation</li>
+                                <li>Support local and ethical businesses</li>
+                                <li>Conserve energy and water</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="sustainability-tips">
+                    <h3>Practical Sustainability Tips</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h4>At Home</h4>
+                            <ul>
+                                <li>Switch to LED light bulbs</li>
+                                <li>Unplug electronics when not in use</li>
+                                <li>Use programmable thermostats</li>
+                                <li>Install low-flow water fixtures</li>
+                            </ul>
+                        </div>
+                        <div class="tip-card">
+                            <h4>Transportation</h4>
+                            <ul>
+                                <li>Walk, bike, or use public transit</li>
+                                <li>Carpool or use ride-sharing</li>
+                                <li>Consider electric or hybrid vehicles</li>
+                                <li>Work from home when possible</li>
+                            </ul>
+                        </div>
+                        <div class="tip-card">
+                            <h4>Consumption</h4>
+                            <ul>
+                                <li>Buy only what you need</li>
+                                <li>Choose quality over quantity</li>
+                                <li>Support sustainable brands</li>
+                                <li>Repair instead of replacing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Renewable Energy Section -->
+        <section id="renewable-energy" class="content-section" aria-labelledby="renewable-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="renewable-title">Renewable Energy</h2>
+                    <p class="section-subtitle">Harnessing nature's power for a clean energy future</p>
+                </header>
+                
+                <div class="content-grid">
+                    <article class="content-card">
+                        <div class="card-image">
+                            <img src="https://pixabay.com/get/gd3c84940e3bd716a8ae3e276831d6f72a3c36a9f6c51627d2f71070124a39bd56d02f70c98d2ad11c48111842c1256769f11d0d36b1f9469e9a9578211a5a3df_1280.jpg" alt="Solar energy panels and wind turbines" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Solar Power</h3>
+                            <p>Solar energy harnesses sunlight through photovoltaic cells or thermal collectors, providing clean electricity and heating.</p>
+                            <ul class="key-points">
+                                <li>Fastest-growing energy source globally</li>
+                                <li>Costs have dropped 80% since 2010</li>
+                                <li>Can power homes, businesses, and utilities</li>
+                                <li>Creates jobs in manufacturing and installation</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="content-card">
+                        <div class="card-image">
+                            <img src="https://pixabay.com/get/g5d3c01c1569fd4ceb3b9c141a8b40cbb0a2cc15146032ea045e116882d070a64f2b76094e1893306b753406eaf17f6923d39f949af5caef0c5660f2e4c1a7668_1280.jpg" alt="Wind energy turbines" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Wind Energy</h3>
+                            <p>Wind turbines convert kinetic energy from moving air into electricity, offering scalable clean energy solutions.</p>
+                            <ul class="key-points">
+                                <li>Second-largest renewable energy source</li>
+                                <li>Onshore and offshore installations</li>
+                                <li>Can power millions of homes</li>
+                                <li>Minimal environmental footprint</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="content-card">
+                        <div class="card-image">
+                            <img src="https://pixabay.com/get/g0a328cd05e7a059e6eb2badc33d5f67be5673429b4a01de59eb1e4351487b19bbbfe0b24ada4744114ab6d61d9ba30e90268ea7dfdeffd58f3e6648a1627d430_1280.jpg" alt="Hydroelectric power generation" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Other Renewables</h3>
+                            <p>Hydroelectric, geothermal, and biomass energy provide diverse renewable options for different regions and needs.</p>
+                            <ul class="key-points">
+                                <li><strong>Hydroelectric:</strong> Uses flowing water</li>
+                                <li><strong>Geothermal:</strong> Harnesses Earth's heat</li>
+                                <li><strong>Biomass:</strong> Converts organic matter</li>
+                                <li><strong>Tidal:</strong> Captures ocean energy</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="energy-comparison">
+                    <h3>Renewable vs. Fossil Fuels</h3>
+                    <div class="comparison-grid">
+                        <div class="comparison-item">
+                            <h4>Environmental Impact</h4>
+                            <div class="comparison-bars">
+                                <div class="bar-item">
+                                    <span>Renewable Energy</span>
+                                    <div class="bar">
+                                        <div class="bar-fill renewable" style="width: 10%"></div>
+                                    </div>
+                                    <span>Low</span>
+                                </div>
+                                <div class="bar-item">
+                                    <span>Fossil Fuels</span>
+                                    <div class="bar">
+                                        <div class="bar-fill fossil" style="width: 90%"></div>
+                                    </div>
+                                    <span>High</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-item">
+                            <h4>Long-term Costs</h4>
+                            <div class="comparison-bars">
+                                <div class="bar-item">
+                                    <span>Renewable Energy</span>
+                                    <div class="bar">
+                                        <div class="bar-fill renewable" style="width: 25%"></div>
+                                    </div>
+                                    <span>Decreasing</span>
+                                </div>
+                                <div class="bar-item">
+                                    <span>Fossil Fuels</span>
+                                    <div class="bar">
+                                        <div class="bar-fill fossil" style="width: 75%"></div>
+                                    </div>
+                                    <span>Volatile</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Environmental Protection Section -->
+        <section id="environmental-protection" class="content-section alternate" aria-labelledby="protection-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="protection-title">Environmental Protection</h2>
+                    <p class="section-subtitle">Safeguarding ecosystems and biodiversity for future generations</p>
+                </header>
+                
+                <div class="content-grid">
+                    <article class="content-card">
+                        <div class="card-image">
+                            <img src="https://pixabay.com/get/g42a6a10524308fe90335b8c390cc2eae5583875a66b965219922252a9f2b2f4ed67db3c5c9eb1878358c9272ad7f37287f343e3b88535394620e673dea2a04b7_1280.jpg" alt="Forest conservation and protection" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Biodiversity Conservation</h3>
+                            <p>Protecting the variety of life on Earth is crucial for ecosystem stability and human well-being.</p>
+                            <ul class="key-points">
+                                <li>1 million species face extinction risk</li>
+                                <li>Forests store 1/3 of global CO2 emissions</li>
+                                <li>Protected areas cover 15% of land surface</li>
+                                <li>Indigenous communities protect 80% of biodiversity</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="content-card">
+                        <div class="card-image">
+                            <img src="https://pixabay.com/get/gea89c2e073f288e217e6c17f7afe7a7fd2cc6b46aaebf1c4c3b338b869dcc7ccb3d0bee9de173e141982f44f7bda71bec883490f076935f657e5463bb3793013_1280.jpg" alt="Ocean and marine protection" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Ocean Health</h3>
+                            <p>Oceans regulate climate, provide oxygen, and support billions of people worldwide.</p>
+                            <ul class="key-points">
+                                <li>Oceans produce 70% of our oxygen</li>
+                                <li>8 million tons of plastic enter oceans annually</li>
+                                <li>30% of CO2 emissions absorbed by oceans</li>
+                                <li>Marine protected areas growing globally</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="content-card">
+                        <div class="card-image">
+                            <img src="https://pixabay.com/get/gc32e23b1fe4577ed7359334e3c5f470e7966708ec9da43b010727ae821908cf01fc8e70d206d2d82d0444ee6188a29281578a817b215301afb54b4f69839a374_1280.jpg" alt="Air quality and pollution control" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Pollution Prevention</h3>
+                            <p>Reducing air, water, and soil pollution protects human health and environmental quality.</p>
+                            <ul class="key-points">
+                                <li>Air pollution causes 7 million deaths annually</li>
+                                <li>2 billion people lack safe drinking water</li>
+                                <li>Soil degradation affects 1/3 of farmland</li>
+                                <li>Clean technology solutions expanding rapidly</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="protection-actions">
+                    <h3>How You Can Help</h3>
+                    <div class="actions-grid">
+                        <div class="action-card">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="var(--color-primary)" aria-hidden="true">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <h4>Support Conservation</h4>
+                            <p>Donate to environmental organizations, adopt sustainable practices, and advocate for conservation policies.</p>
+                        </div>
+                        
+                        <div class="action-card">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="var(--color-primary)" aria-hidden="true">
+                                <path d="M19 7h-3V6c0-1.1-.9-2-2-2H10c-1.1 0-2 .9-2 2v1H5c-.6 0-1 .4-1 1s.4 1 1 1h1v9c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V9h1c.6 0 1-.4 1-1s-.4-1-1-1zM10 6h4v1h-4V6zm6 12H8V9h8v9z"/>
+                            </svg>
+                            <h4>Reduce Waste</h4>
+                            <p>Minimize consumption, recycle properly, and choose products with minimal packaging.</p>
+                        </div>
+                        
+                        <div class="action-card">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="var(--color-primary)" aria-hidden="true">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </svg>
+                            <h4>Educate Others</h4>
+                            <p>Share knowledge about environmental issues and solutions with friends, family, and community.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery Section -->
+        <section id="gallery" class="gallery-section" aria-labelledby="gallery-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="gallery-title">Visual Stories</h2>
+                    <p class="section-subtitle">Explore our planet's beauty and the urgent need for protection</p>
+                </header>
+                
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All Images</button>
+                    <button class="filter-btn" data-filter="climate">Climate Change</button>
+                    <button class="filter-btn" data-filter="sustainability">Sustainability</button>
+                    <button class="filter-btn" data-filter="renewable">Renewable Energy</button>
+                    <button class="filter-btn" data-filter="protection">Environmental Protection</button>
+                </div>
+                
+                <div class="gallery-grid" id="gallery-container">
+                    <!-- Gallery items will be populated by JavaScript -->
+                </div>
+                
+                <!-- Modal for enlarged images -->
+                <div id="gallery-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+                    <div class="modal-content">
+                        <button class="modal-close" aria-label="Close modal">&times;</button>
+                        <img id="modal-image" src="" alt="" loading="lazy">
+                        <div class="modal-info">
+                            <h3 id="modal-title"></h3>
+                            <p id="modal-description"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EcoLearn</h3>
+                    <p>Empowering environmental education for a sustainable future.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#climate-change">Climate Change</a></li>
+                        <li><a href="#sustainability">Sustainability</a></li>
+                        <li><a href="#renewable-energy">Renewable Energy</a></li>
+                        <li><a href="#environmental-protection">Environmental Protection</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://www.ipcc.ch/" target="_blank" rel="noopener">IPCC Reports</a></li>
+                        <li><a href="https://www.unep.org/" target="_blank" rel="noopener">UN Environment</a></li>
+                        <li><a href="https://www.epa.gov/" target="_blank" rel="noopener">EPA</a></li>
+                        <li><a href="https://www.nasa.gov/climate/" target="_blank" rel="noopener">NASA Climate</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links" role="list">
+                        <a href="#" aria-label="Follow us on Twitter" role="listitem">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Follow us on Facebook" role="listitem">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Follow us on Instagram" role="listitem">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.328-1.297L6.37 14.443c.636.748 1.568 1.207 2.607 1.207 1.882 0 3.411-1.529 3.411-3.411 0-1.882-1.529-3.411-3.411-3.411-1.039 0-1.971.459-2.607 1.207L4.121 8.787c.88-.807 2.031-1.297 3.328-1.297 2.726 0 4.939 2.211 4.939 4.939 0 2.726-2.213 4.937-4.939 4.937zm11.552-2.078c0 .414-.336.75-.75.75h-4.992c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h4.992c.414 0 .75.336.75.75z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 EcoLearn. Educational content for environmental awareness</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
