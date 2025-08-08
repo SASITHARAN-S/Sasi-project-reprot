@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Change & Sustainability Hub | Educational Platform</title>
+    <meta name="description" content="Comprehensive educational platform about climate change, sustainability, and environmental conservation with interactive visualizations and data-driven insights.">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts for diverse typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Animated Background Particles -->
+    <div class="background-particles" id="particles"></div>
+    
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-animation">
+            <div class="earth-spinner"></div>
+            <h2 class="loading-text">Loading Climate Data...</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header" id="mainHeader">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-section">
+                    <i class="fas fa-leaf logo-icon"></i>
+                    <h1 class="logo-text">EcoEduHub</h1>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#climate-crisis" class="nav-link">Climate Crisis</a></li>
+                    <li><a href="#data-visualization" class="nav-link">Data & Stats</a></li>
+                    <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                    <li><a href="#renewable-energy" class="nav-link">Renewable Energy</a></li>
+                    <li><a href="#take-action" class="nav-link">Take Action</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text-container">
+                <h1 class="hero-title animated-text" style="margin-top: 100px;">
+                    Climate Change Education
+                </h1>
+                <p class="hero-subtitle fade-in-up">
+                    Discover the science, understand the impact, and explore solutions for our planet's future
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="1.1">0</span>
+                        <span class="stat-unit">°C</span>
+                        <span class="stat-label">Global Temperature Rise</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="420">0</span>
+                        <span class="stat-unit">ppm</span>
+                        <span class="stat-label">CO₂ Concentration</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="8">0</span>
+                        <span class="stat-unit">years</span>
+                        <span class="stat-label">Time to Act</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary pulse-animation">
+                        <i class="fas fa-play"></i>
+                        Start Learning
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-chart-line"></i>
+                        View Data
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="floating-icon" style="--delay: 0s;">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="floating-icon" style="--delay: 1s;">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="floating-icon" style="--delay: 2s;">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="floating-icon" style="--delay: 3s;">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Climate Crisis Section -->
+    <section id="climate-crisis" class="climate-crisis-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Understanding the Climate Crisis</h2>
+                <p class="section-subtitle">Explore the science behind climate change through interactive visualizations</p>
+            </div>
+            
+            <div class="crisis-grid">
+                <div class="crisis-card" data-tilt>
+                    <div class="card-header">
+                        <img src="https://pixabay.com/get/g3f8d81f4f477832b9c5142f7a151478032423cdd5d94cf4da15658ae9f76fb571036683ede0ecf868d25bbc1984b1272eecd1b11a36a64fc191bae55a54ff89b_1280.jpg" alt="Climate Change Infographic" class="card-image">
+                        <div class="card-overlay">
+                            <i class="fas fa-thermometer-half card-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Temperature Rise</h3>
+                        <p class="card-description">Global temperatures have risen by 1.1°C since pre-industrial times, causing unprecedented changes to our climate system.</p>
+                        <div class="progress-indicator">
+                            <div class="progress-track">
+                                <div class="progress-bar-fill" data-progress="73"></div>
+                            </div>
+                            <span class="progress-text">73% of climate tipping point</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crisis-card" data-tilt>
+                    <div class="card-header">
+                        <img src="https://pixabay.com/get/g3e9394e4b6f03daa323686006651c9c21ca0d4c04326519534624d002133f7c19b233b5e435945facc77650f3308e4653a85e1d5cf0d56abcf437883ef819567_1280.jpg" alt="Sea Level Rise" class="card-image">
+                        <div class="card-overlay">
+                            <i class="fas fa-water card-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sea Level Rise</h3>
+                        <p class="card-description">Ocean levels are rising at an accelerating rate, threatening coastal communities and ecosystems worldwide.</p>
+                        <div class="data-visualization">
+                            <div class="data-point">
+                                <span class="data-number">3.4mm</span>
+                                <span class="data-label">per year</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crisis-card" data-tilt>
+                    <div class="card-header">
+                        <img src="https://pixabay.com/get/gf1448a27d35351292bcc475aa3edef010c71a81abd82302871264ce7751a945e40a54a4fcd8d561198646055fcba617af78ebe792ba724209d30c6285005e895_1280.jpg" alt="Ice Melting" class="card-image">
+                        <div class="card-overlay">
+                            <i class="fas fa-icicles card-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Ice Sheet Loss</h3>
+                        <p class="card-description">Arctic sea ice and glaciers are melting at unprecedented rates, contributing to sea level rise and habitat loss.</p>
+                        <div class="impact-meter">
+                            <div class="meter-track">
+                                <div class="meter-fill" data-level="high"></div>
+                            </div>
+                            <span class="meter-label">Critical Impact Level</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crisis-card full-width" data-tilt>
+                    <div class="card-header">
+                        <img src="https://pixabay.com/get/g55dda9294b600d975266a36537edc9dc1ff3b21ed85bdac3f6f6b35f4ffe4421e34da4cf82eab01209c9cb114b2cfe690d87bd762574ce3bac5d2fbb4e203dec_1280.jpg" alt="Extreme Weather" class="card-image">
+                        <div class="card-overlay">
+                            <i class="fas fa-bolt card-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Extreme Weather Events</h3>
+                        <p class="card-description">Climate change is intensifying weather extremes, from devastating hurricanes to prolonged droughts and deadly heatwaves.</p>
+                        <div class="weather-stats">
+                            <div class="weather-stat">
+                                <i class="fas fa-hurricane"></i>
+                                <span class="stat-number">+50%</span>
+                                <span class="stat-label">Storm Intensity</span>
+                            </div>
+                            <div class="weather-stat">
+                                <i class="fas fa-fire"></i>
+                                <span class="stat-number">2x</span>
+                                <span class="stat-label">Wildfire Risk</span>
+                            </div>
+                            <div class="weather-stat">
+                                <i class="fas fa-tint-slash"></i>
+                                <span class="stat-number">+30%</span>
+                                <span class="stat-label">Drought Duration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Visualization Section -->
+    <section id="data-visualization" class="data-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Climate Data Insights</h2>
+                <p class="section-subtitle">Interactive visualizations of environmental trends and projections</p>
+            </div>
+
+            <div class="data-grid">
+                <div class="data-card">
+                    <div class="data-header">
+                        <h3 class="data-title">CO₂ Emissions by Sector</h3>
+                        <img src="https://pixabay.com/get/gbdc1f612cfa1f155cb78dadc2b1669474c435d0f44d54b26145400fa038bcd2d90700a884dc0288996e357eead88016bb800d72d071c7cda86927c17995be774_1280.jpg" alt="Environmental Data" class="data-bg">
+                    </div>
+                    <div class="data-content">
+                        <div class="pie-chart-container">
+                            <svg class="pie-chart" viewBox="0 0 200 200">
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#e0e0e0" stroke-width="20"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#ff6b6b" stroke-width="20" 
+                                        stroke-dasharray="125.6 376.8" stroke-dashoffset="0" class="pie-segment energy"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#4ecdc4" stroke-width="20" 
+                                        stroke-dasharray="87.9 414.5" stroke-dashoffset="-125.6" class="pie-segment transport"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#45b7d1" stroke-width="20" 
+                                        stroke-dasharray="75.4 426.0" stroke-dashoffset="-213.5" class="pie-segment industry"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#96ceb4" stroke-width="20" 
+                                        stroke-dasharray="62.8 439.6" stroke-dashoffset="-288.9" class="pie-segment agriculture"/>
+                            </svg>
+                            <div class="chart-center">
+                                <span class="chart-value">36.8</span>
+                                <span class="chart-unit">Gt CO₂</span>
+                            </div>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #ff6b6b;"></div>
+                                <span>Energy (25%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #4ecdc4;"></div>
+                                <span>Transport (17%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #45b7d1;"></div>
+                                <span>Industry (15%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #96ceb4;"></div>
+                                <span>Agriculture (12%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-card">
+                    <div class="data-header">
+                        <h3 class="data-title">Temperature Anomaly</h3>
+                        <img src="https://pixabay.com/get/g635a98264d4b7747fa187e845af9eb3c02304275b4a68064606f4adfd733045ed397571d5737b3142dcfc0b8f8540a4bf4c4771c7d9d83fa9ede6f38d50c9b2a_1280.jpg" alt="Temperature Data" class="data-bg">
+                    </div>
+                    <div class="data-content">
+                        <div class="line-chart">
+                            <svg viewBox="0 0 400 200" class="temperature-chart">
+                                <defs>
+                                    <linearGradient id="tempGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.8" />
+                                        <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:0.1" />
+                                    </linearGradient>
+                                </defs>
+                                <polyline class="temp-line" points="20,150 60,140 100,130 140,110 180,95 220,85 260,75 300,65 340,55 380,45" 
+                                         fill="none" stroke="#ff6b6b" stroke-width="3"/>
+                                <polygon class="temp-area" points="20,150 60,140 100,130 140,110 180,95 220,85 260,75 300,65 340,55 380,45 380,180 20,180" 
+                                        fill="url(#tempGradient)"/>
+                            </svg>
+                        </div>
+                        <div class="chart-info">
+                            <div class="info-item">
+                                <span class="info-label">Current Anomaly</span>
+                                <span class="info-value">+1.15°C</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Trend</span>
+                                <span class="info-value trend-up">↗ Rising</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-card wide">
+                    <div class="data-header">
+                        <h3 class="data-title">Global Carbon Budget</h3>
+                        <img src="https://pixabay.com/get/gc77eb14ce3cb79138f06c22e1f960d1b37036e2dbed218c2759affd4826182a060a8c005238d349c1ff21e62f7dc6e33e984b0063f3099216d05f8ae2576f2cc_1280.jpg" alt="Carbon Budget" class="data-bg">
+                    </div>
+                    <div class="data-content">
+                        <div class="budget-visualization">
+                            <div class="budget-bar">
+                                <div class="budget-used" data-width="67"></div>
+                                <div class="budget-remaining" data-width="33"></div>
+                            </div>
+                            <div class="budget-labels">
+                                <span class="budget-label used">Used: 67%</span>
+                                <span class="budget-label remaining">Remaining: 33%</span>
+                            </div>
+                        </div>
+                        <div class="budget-details">
+                            <div class="detail-item">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>At current rates, budget exhausted in 8 years</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-target"></i>
+                                <span>Goal: Net zero emissions by 2050</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-card">
+                    <div class="data-header">
+                        <h3 class="data-title">Renewable Energy Growth</h3>
+                        <img src="https://pixabay.com/get/gb3b140495c6686a0e0061ee7aee09aec65f110c18d3c344d3f2215901c862b02ecfb8e9e8c6b704e823e38c1f6278aea889db12b71b99a4886b1ce2a3070a5ad_1280.jpg" alt="Renewable Growth" class="data-bg">
+                    </div>
+                    <div class="data-content">
+                        <div class="growth-chart">
+                            <div class="growth-bars">
+                                <div class="growth-bar">
+                                    <div class="bar-fill solar" data-height="85"></div>
+                                    <span class="bar-label">Solar</span>
+                                </div>
+                                <div class="growth-bar">
+                                    <div class="bar-fill wind" data-height="72"></div>
+                                    <span class="bar-label">Wind</span>
+                                </div>
+                                <div class="growth-bar">
+                                    <div class="bar-fill hydro" data-height="45"></div>
+                                    <span class="bar-label">Hydro</span>
+                                </div>
+                                <div class="growth-bar">
+                                    <div class="bar-fill other" data-height="28"></div>
+                                    <span class="bar-label">Other</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="growth-stats">
+                            <div class="growth-stat">
+                                <span class="stat-number">+12%</span>
+                                <span class="stat-label">Annual Growth</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sustainable Solutions</h2>
+                <p class="section-subtitle">Innovative approaches to combat climate change and build a sustainable future</p>
+            </div>
+
+            <div class="solutions-grid">
+                <div class="solution-card hover-lift">
+                    <div class="solution-icon">
+                        <img src="https://pixabay.com/get/gfd46c956c19d8e393e6d1b48ed89230e6912e150a784550de71033103e1b9b664209c16704498daafbfdb3086e89c1c2ba0000a93de754b737abd7531078009b_1280.jpg" alt="Sustainability Icon" class="icon-bg">
+                        <i class="fas fa-recycle solution-icon-overlay"></i>
+                    </div>
+                    <div class="solution-content">
+                        <h3 class="solution-title">Circular Economy</h3>
+                        <p class="solution-description">Transforming linear "take-make-waste" models into regenerative systems that eliminate waste and maximize resource efficiency.</p>
+                        <div class="solution-metrics">
+                            <div class="metric">
+                                <span class="metric-value">80%</span>
+                                <span class="metric-label">Waste Reduction</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">45%</span>
+                                <span class="metric-label">Cost Savings</span>
+                            </div>
+                        </div>
+                        <button class="solution-btn">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="solution-card hover-lift">
+                    <div class="solution-icon">
+                        <img src="https://pixabay.com/get/gdefb38e0b164bc90b5a4ab4eac84af00cbb8efcaec3ac99fbe6082500ecd0b0d39b09d1b17f9ebc9bd0383ad2043c816790e6b7833c1d426ae1b145cf3830d09_1280.jpg" alt="Green Technology" class="icon-bg">
+                        <i class="fas fa-leaf solution-icon-overlay"></i>
+                    </div>
+                    <div class="solution-content">
+                        <h3 class="solution-title">Green Technology</h3>
+                        <p class="solution-description">Innovative technologies that reduce environmental impact while driving economic growth and improving quality of life.</p>
+                        <div class="solution-metrics">
+                            <div class="metric">
+                                <span class="metric-value">60%</span>
+                                <span class="metric-label">Emission Reduction</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">2.5x</span>
+                                <span class="metric-label">Efficiency Gain</span>
+                            </div>
+                        </div>
+                        <button class="solution-btn">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="solution-card hover-lift">
+                    <div class="solution-icon">
+                        <img src="https://pixabay.com/get/gc5c5b35db63e214a982b660b70b36a2799b1b59ce3a9d9539547d25b5636b038f342ecfcdee82a02a624f5cd3a6c7c95be0adfa24df47c99c3c1f62566830f26_1280.jpg" alt="Smart Cities" class="icon-bg">
+                        <i class="fas fa-city solution-icon-overlay"></i>
+                    </div>
+                    <div class="solution-content">
+                        <h3 class="solution-title">Smart Cities</h3>
+                        <p class="solution-description">Intelligent urban planning and infrastructure that optimizes resource use, reduces emissions, and enhances livability.</p>
+                        <div class="solution-metrics">
+                            <div class="metric">
+                                <span class="metric-value">40%</span>
+                                <span class="metric-label">Energy Savings</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">30%</span>
+                                <span class="metric-label">Traffic Reduction</span>
+                            </div>
+                        </div>
+                        <button class="solution-btn">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="solution-card hover-lift">
+                    <div class="solution-icon">
+                        <img src="https://pixabay.com/get/ga62f1f6287370b2562a56f6aff31109d7feec0cc619d7cfd70ccf3ca9b16a057fe08f39b7bcebfc5f4a013bc399f527cf336c1cb3fccc88f632a631d0cd92ff0_1280.jpg" alt="Carbon Capture" class="icon-bg">
+                        <i class="fas fa-wind solution-icon-overlay"></i>
+                    </div>
+                    <div class="solution-content">
+                        <h3 class="solution-title">Carbon Capture</h3>
+                        <p class="solution-description">Advanced technologies that remove CO₂ from the atmosphere and convert it into useful products or store it safely underground.</p>
+                        <div class="solution-metrics">
+                            <div class="metric">
+                                <span class="metric-value">1M</span>
+                                <span class="metric-label">Tons CO₂/year</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">95%</span>
+                                <span class="metric-label">Capture Rate</span>
+                            </div>
+                        </div>
+                        <button class="solution-btn">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="solution-card hover-lift">
+                    <div class="solution-icon">
+                        <img src="https://pixabay.com/get/g6bb2b4fc0f84128e639387de3192fc4e2f86d23af3eff1ae8183e601ac5407387df84f7cc9d0f605d8d3141d7300c19ff0d20da955f70f93da6d0a38071841e9_1280.jpg" alt="Sustainable Agriculture" class="icon-bg">
+                        <i class="fas fa-seedling solution-icon-overlay"></i>
+                    </div>
+                    <div class="solution-content">
+                        <h3 class="solution-title">Sustainable Agriculture</h3>
+                        <p class="solution-description">Farming practices that protect the environment, support communities, and ensure food security for future generations.</p>
+                        <div class="solution-metrics">
+                            <div class="metric">
+                                <span class="metric-value">50%</span>
+                                <span class="metric-label">Water Savings</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">25%</span>
+                                <span class="metric-label">Yield Increase</span>
+                            </div>
+                        </div>
+                        <button class="solution-btn">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="solution-card hover-lift">
+                    <div class="solution-icon">
+                        <img src="https://pixabay.com/get/g6a89ceab566305a6f40fff78256d938dd025e56add89335eab2e04e01031027fc24e4ecadc3ba35f5698366cadb95f86e0be7960cc85fa0459a1319d3f929022_1280.jpg" alt="Ocean Conservation" class="icon-bg">
+                        <i class="fas fa-water solution-icon-overlay"></i>
+                    </div>
+                    <div class="solution-content">
+                        <h3 class="solution-title">Ocean Conservation</h3>
+                        <p class="solution-description">Protecting marine ecosystems through innovative conservation strategies, pollution reduction, and sustainable fishing practices.</p>
+                        <div class="solution-metrics">
+                            <div class="metric">
+                                <span class="metric-value">70%</span>
+                                <span class="metric-label">Plastic Reduction</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">40%</span>
+                                <span class="metric-label">Species Recovery</span>
+                            </div>
+                        </div>
+                        <button class="solution-btn">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Renewable Energy Section -->
+    <section id="renewable-energy" class="renewable-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Renewable Energy Revolution</h2>
+                <p class="section-subtitle">Powering the future with clean, sustainable energy sources</p>
+            </div>
+
+            <div class="energy-showcase">
+                <div class="energy-card solar-card">
+                    <div class="energy-visual">
+                        <img src="https://pixabay.com/get/gd3d42febc182854f2916a1a530396c64051222be25af8781285cbf76c56453b1826e989fa4af9b375959ceac5f9bfb94e9a960ad3951d57b240af5ad237ba32d_1280.jpg" alt="Solar Energy" class="energy-bg">
+                        <div class="energy-overlay">
+                            <div class="energy-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div class="energy-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">173,000</span>
+                                    <span class="stat-unit">TW</span>
+                                    <span class="stat-label">Solar Potential</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="energy-content">
+                        <h3 class="energy-title">Solar Power</h3>
+                        <p class="energy-description">Harnessing the unlimited power of the sun through advanced photovoltaic technology.</p>
+                        <div class="energy-metrics">
+                            <div class="metric-bar">
+                                <span class="metric-label">Cost Reduction</span>
+                                <div class="metric-track">
+                                    <div class="metric-fill" data-percentage="89"></div>
+                                </div>
+                                <span class="metric-value">89%</span>
+                            </div>
+                            <div class="metric-bar">
+                                <span class="metric-label">Efficiency</span>
+                                <div class="metric-track">
+                                    <div class="metric-fill" data-percentage="22"></div>
+                                </div>
+                                <span class="metric-value">22%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="energy-card wind-card">
+                    <div class="energy-visual">
+                        <img src="https://pixabay.com/get/g8245d91a3ed8736c2e66ce212a5e798377eabaa2e9eedd0960616442e4ff070d9f0187f6f908d18eef0191f18fb583404b2273e5d925c9fd9b06ad01dc3f1d7a_1280.jpg" alt="Wind Energy" class="energy-bg">
+                        <div class="energy-overlay">
+                            <div class="energy-icon">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                            <div class="energy-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">35,000</span>
+                                    <span class="stat-unit">MW</span>
+                                    <span class="stat-label">Global Capacity</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="energy-content">
+                        <h3 class="energy-title">Wind Power</h3>
+                        <p class="energy-description">Converting kinetic energy from wind into clean electricity through modern turbine technology.</p>
+                        <div class="energy-metrics">
+                            <div class="metric-bar">
+                                <span class="metric-label">Growth Rate</span>
+                                <div class="metric-track">
+                                    <div class="metric-fill" data-percentage="53"></div>
+                                </div>
+                                <span class="metric-value">53%</span>
+                            </div>
+                            <div class="metric-bar">
+                                <span class="metric-label">Capacity Factor</span>
+                                <div class="metric-track">
+                                    <div class="metric-fill" data-percentage="45"></div>
+                                </div>
+                                <span class="metric-value">45%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="energy-card hydro-card">
+                    <div class="energy-visual">
+                        <img src="https://pixabay.com/get/gef16ac8070903ec4fcf5f02f2d99a9d8881c1c3e5fb1b5975948c3c96e89f7e4be50262983b83e2863e4ff8b5eeba4319b8189ae129040007090150310b8f4ea_1280.jpg" alt="Hydro Energy" class="energy-bg">
+                        <div class="energy-overlay">
+                            <div class="energy-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="energy-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">1,308</span>
+                                    <span class="stat-unit">GW</span>
+                                    <span class="stat-label">Installed Capacity</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="energy-content">
+                        <h3 class="energy-title">Hydroelectric</h3>
+                        <p class="energy-description">Generating clean electricity from flowing water, providing reliable and sustainable power.</p>
+                        <div class="energy-metrics">
+                            <div class="metric-bar">
+                                <span class="metric-label">Reliability</span>
+                                <div class="metric-track">
+                                    <div class="metric-fill" data-percentage="95"></div>
+                                </div>
+                                <span class="metric-value">95%</span>
+                            </div>
+                            <div class="metric-bar">
+                                <span class="metric-label">Lifespan</span>
+                                <div class="metric-track">
+                                    <div class="metric-fill" data-percentage="80"></div>
+                                </div>
+                                <span class="metric-value">100+ years</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="energy-card geothermal-card">
+                    <div class="energy-visual">
+                        <img src="https://pixabay.com/get/g0e513366e8c9c3af058128d26c633f7cc6000022f66fe551cb67f98ba12d6ad2e87603fc3221fc421a922e72ac3eed3fa90d3a7a24c0853a7d624f54b42142d3_1280.jpg" alt="Geothermal Energy" class="energy-bg">
+                        <div class="energy-overlay">
+                            <div class="energy-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="energy-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">15.4</span>
+                                    <span class="stat-unit">GW</span>
+                                    <span class="stat-label">Global Capacity</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="energy-content">
+                        <h3 class="energy-title">Geothermal</h3>
+                        <p class="energy-description">Tapping into Earth's internal heat to generate consistent, renewable energy around the clock.</p>
+                        <div class="energy-metrics">
+                            <div class="metric-bar">
+                                <span class="metric-label">Availability</span>
+                                <div class="metric-track">
+                                    <div class="metric-fill" data-percentage="90"></div>
+                                </div>
+                                <span class="metric-value">90%</span>
+                            </div>
+                            <div class="metric-bar">
+                                <span class="metric-label">Emissions</span>
+                                <div class="metric-track">
+                                    <div class="metric-fill" data-percentage="5"></div>
+                                </div>
+                                <span class="metric-value">Near Zero</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="energy-comparison">
+                <h3 class="comparison-title">Energy Source Comparison</h3>
+                <div class="comparison-chart">
+                    <div class="comparison-metric">
+                        <h4>Cost per MWh</h4>
+                        <div class="cost-bars">
+                            <div class="cost-bar">
+                                <span class="bar-label">Solar</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill renewable" style="width: 30%;"></div>
+                                </div>
+                                <span class="bar-value">$68</span>
+                            </div>
+                            <div class="cost-bar">
+                                <span class="bar-label">Wind</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill renewable" style="width: 35%;"></div>
+                                </div>
+                                <span class="bar-value">$78</span>
+                            </div>
+                            <div class="cost-bar">
+                                <span class="bar-label">Coal</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill fossil" style="width: 65%;"></div>
+                                </div>
+                                <span class="bar-value">$145</span>
+                            </div>
+                            <div class="cost-bar">
+                                <span class="bar-label">Gas</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill fossil" style="width: 50%;"></div>
+                                </div>
+                                <span class="bar-value">$112</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Take Action Section -->
+    <section id="take-action" class="action-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Take Action Now</h2>
+                <p class="section-subtitle">Every action counts in the fight against climate change. Start your impact today.</p>
+            </div>
+
+            <div class="action-grid">
+                <div class="action-card personal-action">
+                    <div class="action-header">
+                        <h3 class="action-title">Personal Actions</h3>
+                        <i class="fas fa-user action-icon"></i>
+                    </div>
+                    <div class="action-content">
+                        <ul class="action-list">
+                            <li class="action-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>Switch to renewable energy</span>
+                                <div class="impact-indicator high"></div>
+                            </li>
+                            <li class="action-item">
+                                <i class="fas fa-car"></i>
+                                <span>Use public transport or bike</span>
+                                <div class="impact-indicator medium"></div>
+                            </li>
+                            <li class="action-item">
+                                <i class="fas fa-leaf"></i>
+                                <span>Reduce, reuse, recycle</span>
+                                <div class="impact-indicator medium"></div>
+                            </li>
+                            <li class="action-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>Eat less meat</span>
+                                <div class="impact-indicator high"></div>
+                            </li>
+                            <li class="action-item">
+                                <i class="fas fa-home"></i>
+                                <span>Improve home insulation</span>
+                                <div class="impact-indicator high"></div>
+                            </li>
+                        </ul>
+                        <div class="action-calculator">
+                            <h4>Your Potential Impact</h4>
+                            <div class="calculator-result">
+                                <span class="co2-savings">4.6 tons CO₂/year</span>
+                                <span class="savings-label">potential savings</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-card community-action">
+                    <div class="action-header">
+                        <h3 class="action-title">Community Engagement</h3>
+                        <i class="fas fa-users action-icon"></i>
+                    </div>
+                    <div class="action-content">
+                        <div class="engagement-options">
+                            <div class="option-card">
+                                <i class="fas fa-vote-yea"></i>
+                                <h4>Vote & Advocate</h4>
+                                <p>Support climate-conscious policies and candidates</p>
+                                <button class="option-btn">Get Involved</button>
+                            </div>
+                            <div class="option-card">
+                                <i class="fas fa-seedling"></i>
+                                <h4>Local Projects</h4>
+                                <p>Join community tree planting and clean energy initiatives</p>
+                                <button class="option-btn">Find Projects</button>
+                            </div>
+                            <div class="option-card">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h4>Educate Others</h4>
+                                <p>Share knowledge and raise awareness in your network</p>
+                                <button class="option-btn">Learn How</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-card business-action">
+                    <div class="action-header">
+                        <h3 class="action-title">Business Solutions</h3>
+                        <i class="fas fa-building action-icon"></i>
+                    </div>
+                    <div class="action-content">
+                        <div class="business-metrics">
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="metric-info">
+                                    <span class="metric-value">25%</span>
+                                    <span class="metric-label">Average cost savings from sustainability</span>
+                                </div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="metric-info">
+                                    <span class="metric-value">73%</span>
+                                    <span class="metric-label">Consumers prefer sustainable brands</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="business-actions">
+                            <div class="business-action-item">
+                                <span>Carbon footprint assessment</span>
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="business-action-item">
+                                <span>Renewable energy transition</span>
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="business-action-item">
+                                <span>Sustainable supply chain</span>
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="business-action-item">
+                                <span>Green building certification</span>
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-tracker">
+                <h3 class="tracker-title">Global Action Tracker</h3>
+                <div class="tracker-content">
+                    <div class="tracker-stats">
+                        <div class="tracker-stat">
+                            <span class="stat-number" data-target="1200000">0</span>
+                            <span class="stat-label">People taking action</span>
+                        </div>
+                        <div class="tracker-stat">
+                            <span class="stat-number" data-target="5600">0</span>
+                            <span class="stat-label">Tons CO₂ saved this month</span>
+                        </div>
+                        <div class="tracker-stat">
+                            <span class="stat-number" data-target="340">0</span>
+                            <span class="stat-label">Communities engaged</span>
+                        </div>
+                    </div>
+                    <div class="progress-indicator-global">
+                        <div class="progress-track-global">
+                            <div class="progress-fill-global" data-progress="34"></div>
+                        </div>
+                        <span class="progress-label-global">Global Climate Action Progress: 34%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>EcoEduHub</span>
+                    </div>
+                    <p class="footer-description">
+                        Empowering global climate action through education, awareness, and community engagement.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#climate-crisis">Climate Science</a></li>
+                        <li><a href="#data-visualization">Data & Research</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#renewable-energy">Renewable Energy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Educational Materials</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Action Guides</a></li>
+                        <li><a href="#">Community Forum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Stay Updated</h4>
+                    <p>Get the latest climate news and action opportunities.</p>
+                    <div class="newsletter-signup">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input">
+                        <button class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 EcoEduHub. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                </div>
+                <div class="footer-climate-clock">
+                    <span class="clock-label">Time to act:</span>
+                    <span class="clock-time" id="climateClock">07y 234d 15h 42m</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html>
